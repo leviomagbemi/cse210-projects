@@ -20,7 +20,7 @@ class Program
         int lastdigit = int.Parse(lastValue);
         
         // Check grade percentage and assign a Letter
-        if(grade >= 90)
+        if (grade >= 90)
         {
             letter = "A";
         }
@@ -42,7 +42,7 @@ class Program
         }
 
         // Check grade last digit and assign a sign
-        if(lastdigit >= 7 && letter != "A")
+        if (lastdigit >= 7 && letter != "A")
         {
             sign = "+";
         }
@@ -55,7 +55,17 @@ class Program
             sign = "";
         }
 
-        // Display output in console
+
+        // Display grade output in console
         Console.WriteLine(sign + letter);
+
+        // Check if student passes
+        if (grade >= 70){
+            Console.WriteLine("Great job! You passed!");
+        }
+        else
+        {
+            Console.WriteLine("Nice performance! You can do better next time");
+        }
     }
 }
