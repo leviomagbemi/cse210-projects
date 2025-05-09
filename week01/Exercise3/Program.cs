@@ -17,7 +17,6 @@ class Program
             {
                 Random randomGenerator = new Random();
                 magicNumber = randomGenerator.Next(1, 101);
-                Console.WriteLine(magicNumber);
 
                 Console.Write("What is your guess number? ");
                 guessNumber = int.Parse(Console.ReadLine());
