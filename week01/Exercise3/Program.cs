@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.InteropServices;
 
 class Program
 {
@@ -9,15 +8,16 @@ class Program
 
         while(playAgain == "yes")
         {
-            int magicNumber;
-            int guessNumber;
+            int guessNumber = -1;
+
+            Random randomGenerator = new Random();
+            int magicNumber = randomGenerator.Next(1, 101);
+
+            Console.WriteLine(magicNumber);
+
             int guessCount = 0;
 
-            do
-            {
-                Random randomGenerator = new Random();
-                magicNumber = randomGenerator.Next(1, 101);
-
+            while(magicNumber != guessNumber) {
                 Console.Write("What is your guess number? ");
                 guessNumber = int.Parse(Console.ReadLine());
 
@@ -38,7 +38,7 @@ class Program
                     Console.Write("Do you want to continue playing(Yes/No)? ");
                     playAgain = Console.ReadLine().ToLower();
                 }
-            } while(magicNumber != guessNumber);
+            } 
         }
     }
 }
