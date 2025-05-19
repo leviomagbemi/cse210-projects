@@ -16,7 +16,7 @@ public class PromptGenerator
     _prompts.Add("What are three things you're grateful for today?");
     _prompts.Add("Describe a moment when you felt challenged today. How did you respond?");
     _prompts.Add("What is something you're looking forward to?");
-    _prompts.Add("Write about someone who made a positive impact on your life tody.");
+    _prompts.Add("Write about someone who made a positive impact on your life today.");
 
     // Get a random prompt
     Random rand = new Random();
