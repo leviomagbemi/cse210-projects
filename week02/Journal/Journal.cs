@@ -1,4 +1,5 @@
 using System;
+using System.Security;
 
 public class Journal
 {
@@ -13,9 +14,7 @@ public class Journal
   {
     foreach (Entry entry in _entries)
     {
-      Console.WriteLine($"Date: {entry._date} - Prompt: {entry._promptText}");
-      Console.WriteLine($"{entry._entryText}");
-      Console.WriteLine();
+      entry.Display();
     }
   }
 
@@ -25,23 +24,28 @@ public class Journal
     {
       foreach (Entry entry in _entries)
       {
-        outputFile.WriteLine($"Date: {entry._date} - Prompt: {entry._promptText}\n{entry._entryText}~");
+        outputFile.WriteLine($"{entry._date}~{entry._promptText}~{entry._entryText}");
       }
     }
   }
 
   public void LoadFromFile(string file)
   {
+    // Read Each Entries Into a line
     string[] lines = System.IO.File.ReadAllLines(file);
 
     foreach (string line in lines)
-    {
+    { 
+      // Get Entry Parts: _date, _promptText, _entryText
       string[] parts = line.Split("~");
 
-      foreach (string part in parts)
-      {
-        Console.WriteLine(part);
-      } 
+      Entry newEntry = new Entry();
+
+      newEntry._date = parts[0];
+      newEntry._promptText = parts[1];
+      newEntry._entryText = parts[2];
+
+      AddNewEntry(newEntry);
     }  
   }
 }

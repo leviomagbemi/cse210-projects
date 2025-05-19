@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Journal journal = new Journal();
+        PromptGenerator promptGenerator = new PromptGenerator();
 
         int userChoice = PromptUser();
 
@@ -15,8 +16,6 @@ class Program
             {
                 // Display Random Prompt
                 // Get Response
-                PromptGenerator promptGenerator = new PromptGenerator();
-
                 string prompt = promptGenerator.GetRandomPrompt();
                 Console.WriteLine(prompt);
                 string userResponse = Console.ReadLine();
