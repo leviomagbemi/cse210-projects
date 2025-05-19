@@ -1,3 +1,6 @@
+// Exceed Requirements by Improving Process of Saving and Loading 
+// By Saving to a .csv File.
+
 using System;
 
 class Program
@@ -17,7 +20,10 @@ class Program
                 // Display Random Prompt
                 // Get Response
                 string prompt = promptGenerator.GetRandomPrompt();
+
                 Console.WriteLine(prompt);
+                Console.Write("> ");
+
                 string userResponse = Console.ReadLine();
 
                 // Create Entry
@@ -49,6 +55,8 @@ class Program
             else if (userChoice == 3)
             {
                 Console.WriteLine("What is the filename");
+                Console.Write("> ");
+
                 string fileName = Console.ReadLine();
 
                 journal.LoadFromFile(fileName);
@@ -60,6 +68,8 @@ class Program
             else if (userChoice == 4)
             {
                 Console.WriteLine("What is the filename");
+                Console.Write("> ");
+
                 string fileName = Console.ReadLine();
 
                 journal.SaveToFile(fileName);
