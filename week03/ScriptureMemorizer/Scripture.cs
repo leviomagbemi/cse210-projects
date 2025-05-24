@@ -6,10 +6,10 @@ public class Scripture
   private List<Word> _words = new List<Word>();
 
 
-  public Scripture(Reference reference, String text)
+  public Scripture(Reference reference, string text)
   {
     _reference = reference;
-    String[] words = text.Split();
+    string[] words = text.Split();
 
     foreach (string word in words)
     {
