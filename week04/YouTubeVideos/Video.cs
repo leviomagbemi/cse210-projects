@@ -21,23 +21,22 @@ public class Video
     _comments.Add(newComment);
   }
 
-  public int GetNoOfComments()
+  private int GetNoOfComments()
   {
     return _comments.Count;
   }
 
   public void Display()
   {
-    string result = $"Title: {_title}\nAuthor: {_author}\nLength: {_length}\n";
-    string comments = "";
+    Console.WriteLine($"Title: {_title}");
+    Console.WriteLine($"Author: {_author}");
+    Console.WriteLine($"Length: {_length}");
+    Console.WriteLine($"Number of Comments: {GetNoOfComments()}");
+    Console.WriteLine($"Comments:");
 
     foreach (Comment comment in _comments)
     {
-      comments += comment.Display();
+      Console.WriteLine(comment.Display());
     }
-
-    result += $"Comments: \n{comments}";
-
-    Console.WriteLine(result);
   }
 }

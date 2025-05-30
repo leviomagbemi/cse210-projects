@@ -15,6 +15,6 @@ public class Comment
 
   public string Display()
   {
-    return $"{_name}\n{_text}\n\n";
+    return $"{_name}\n{_text}\n";
   }
 }
