@@ -1,0 +1,5 @@
+900
+SimpleGoal:Give a talk~Speak in sacrament meeting if asked~100~True
+EternalGoal:Study the scripture~Study the scripture 10 mins daily~50
+ChecklistGoal:Attend weekly prayer meeting~Attend prayer meeting every Friday~50~500~3~4
+ChecklistGoal:Exercise~Exercise daily for 30 mins~100~1000~7~0
